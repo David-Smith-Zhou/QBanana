@@ -13,8 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += .\src\main.cpp\
-       .\src\ui\mainwindow.cpp
+       .\src\ui\mainwindow.cpp \
+    src/utils/log.cpp
 
-HEADERS  += .\src\ui\mainwindow.h
+HEADERS  += .\src\ui\mainwindow.h \
+    src/utils/log.h
 
 FORMS    += .\res\mainwindow.ui
