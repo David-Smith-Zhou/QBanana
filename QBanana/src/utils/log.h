@@ -1,6 +1,7 @@
 #ifndef LOG_H
 #define LOG_H
 
+// 调试信息开关
 #define IS_LOG
 
 
@@ -12,14 +13,18 @@
 
 #ifdef IS_LOG
 
-#define LOG(format, ...)
-#define LOG_INFO(args...) Log::Log_base("INFO", __FILE__, __LINE__, ##args)
+#define LOG_INFO(args...)       Log::Log_base("INFO", __FILE__, __LINE__, ##args)
+#define LOG_WARNNING(args...)   Log::Log_base("WARNNING", __FILE__, __LINE__, ##args)
+#define LOG_DEBUG(args...)      Log::Log_base("DEBUG", __FILE__, __LINE__, ##args)
+#define LOG_ERROR(args...)      Log::Log_base("ERROR", __FILE__, __LINE__, ##args)
 
 
-#define DEBUG(level, format,...) printf("[%d][%s][line:%d][%s--%s]"format, level, __FILE__, __LINE__,__DATE__, __TIME__, ##__VA_ARGS__)
 #else
 
-#define LOG_BASE(mnt, ...)
+#define LOG_INFO(args...)
+#define LOG_WARNNING(args...)
+#define LOG_DEBUG(args...)
+#define LOG_ERROR(args...)
 
 #endif
 

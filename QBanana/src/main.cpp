@@ -11,9 +11,9 @@ int main(int argc, char *argv[])
 
     LOG_INFO ("===================================\n");
 
-    LOG_INFO ("int %d\n", i);
-    LOG_INFO ("pointer %p\n", p);
-    LOG_INFO ("string %s", str);
+    LOG_DEBUG ("int %d\n", i);
+    LOG_WARNNING ("pointer %p\n", p);
+    LOG_ERROR ("string %s", str);
 
     LOG_INFO ("===================================\n");
 

@@ -12,7 +12,7 @@ Log::~Log()
 
 void Log::Log_base(const char* level, const char* file, const int lineNo, const char* args...) {
 
-    char content[0xFF];
+    char content[0xFFFF];
     char head[50];
     sprintf (head, "[%s][%s][line:%d]", level, file, lineNo);
 
