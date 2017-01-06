@@ -6,8 +6,18 @@
 int main(int argc, char *argv[])
 {
     int i = 1111;
-    LOG_INFO("-%d-", i);
-    printf("=%d=", i);
+    int *p = &i;
+    char *str = "hello world!\n";
+
+    LOG_INFO ("===================================\n");
+
+    LOG_INFO ("int %d\n", i);
+    LOG_INFO ("pointer %p\n", p);
+    LOG_INFO ("string %s", str);
+
+    LOG_INFO ("===================================\n");
+
+
     QApplication a(argc, argv);
     MainWindow w;
     w.show();
