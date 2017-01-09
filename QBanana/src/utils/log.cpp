@@ -41,7 +41,7 @@ void Log::Log_base(const char* level, const char* file, const int lineNo, const 
     va_start(ap, args);
     vsnprintf (str_buff, 0xFFFF, args, ap);
 
-    sprintf_s (content, "%s%s%s", head, now_time, str_buff);
+    sprintf (content, "%s%s%s", head, now_time, str_buff);
     printf ("%s", content);
 //    fprintf(stdout, args, ap);
     va_end(ap);

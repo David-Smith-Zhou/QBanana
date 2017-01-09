@@ -14,9 +14,13 @@ TEMPLATE = app
 
 SOURCES += .\src\main.cpp\
        .\src\ui\mainwindow.cpp \
-    src/utils/log.cpp
+    src/utils/log.cpp \
+    src/ui/PageList.cpp \
+    src/ui/PageMain.cpp
 
 HEADERS  += .\src\ui\mainwindow.h \
-    src/utils/log.h
+    src/utils/log.h \
+    src/ui/PageList.h \
+    src/ui/PageMain.h
 
 FORMS    += .\res\mainwindow.ui

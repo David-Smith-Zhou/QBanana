@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
     LOG_INFO ("===================================\n");
 
 
+    printf ("fjdksafjdksa");
 
-
-//    std::cout << "456" << std::endl;
+    std::cout << "456" << std::endl;
     return a.exec();
 }
