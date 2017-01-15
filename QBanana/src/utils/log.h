@@ -3,7 +3,8 @@
 
 // 调试信息开关
 #define IS_LOG
-
+#define PLATFROM_WINDOWS
+//#define PLATFROM_LINUX
 
 #include <iostream>
 #include <time.h>

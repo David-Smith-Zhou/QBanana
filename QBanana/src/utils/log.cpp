@@ -42,7 +42,14 @@ void Log::Log_base(const char* level, const char* file, const int lineNo, const 
     vsnprintf (str_buff, 0xFFFF, args, ap);
 
     sprintf (content, "%s%s%s", head, now_time, str_buff);
-    printf ("%s", content);
+
+#ifdef PLATFROM_LINUX
+    printf ("%s\n", content);
+#endif
+
+#ifdef PLATFROM_WINDOWS
+    std::cout << content << std::endl;
+#endif
 //    fprintf(stdout, args, ap);
     va_end(ap);
 

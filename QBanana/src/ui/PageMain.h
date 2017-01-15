@@ -3,6 +3,13 @@
 
 #include <QWidget>
 #include <QPushButton>
+#include <QBoxLayout>
+#include <QTextEdit>
+#include "../utils/log.h"
+
+enum BTN_TYPE {
+    BTN_TYPE_LIST,
+};
 
 class PageMain :public QWidget
 {
@@ -11,11 +18,14 @@ public:
     PageMain();
     ~PageMain();
 public slots:
-    void onMainPageBtnClicked();
+    void slotOnMainPageBtnClicked();
+    void slotOnMainPageBtnClicked(int btnType);
 private:
     QPushButton *listBtn;
+    QBoxLayout *parentLayout;
+    int count;
 signals:
-    void btnClicked(int btnType);
+    void signlaBtnCLicked(int btnType);
 };
 
 #endif // PAGEMAIN_H
