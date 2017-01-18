@@ -22,8 +22,10 @@ public slots:
     void slotOnMainPageBtnClicked(int btnType);
 private:
     QPushButton *listBtn;
+    QPushButton *testBtn;
     QBoxLayout *parentLayout;
     int count;
+    void changePage();
 signals:
     void signlaBtnCLicked(int btnType);
 };
