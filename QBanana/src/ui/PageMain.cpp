@@ -2,12 +2,13 @@
 
 PageMain::PageMain()
 {
-    setGeometry (400, 400, 400, 400);
+    this->setGeometry (0, 0, SCREEN_WIDTH_SIZE, SCREEN_HEIGHT_SIZE);
     listBtn = new QPushButton("链表测试页", 0);
+    listBtn->setFixedSize(500, 30);
     testBtn = new QPushButton("测试按钮", 0);
-    connect (listBtn, SIGNAL(clicked()), this, SLOT(slotOnMainPageBtnClicked()));
-    connect (testBtn, SIGNAL(clicked()), this, SLOT(slotOnMainPageBtnClicked()));
-    connect (this, SIGNAL(signlaBtnCLicked(int)), this, SLOT(slotOnMainPageBtnClicked(int)));
+    this->connect (listBtn, SIGNAL(clicked()), this, SLOT(slotOnMainPageBtnClicked()));
+    this->connect (testBtn, SIGNAL(clicked()), this, SLOT(slotOnMainPageBtnClicked()));
+    this->connect (this, SIGNAL(signlaBtnCLicked(int)), this, SLOT(slotOnMainPageBtnClicked(int)));
     parentLayout = new QBoxLayout(QBoxLayout::TopToBottom, 0);
 
 

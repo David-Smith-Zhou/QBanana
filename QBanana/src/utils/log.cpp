@@ -2,7 +2,7 @@
 
 Log::Log()
 {
-
+    LOG_INFO("log initlization");
 }
 
 Log::~Log()
@@ -13,7 +13,9 @@ Log::~Log()
 void Log::Log_base(const char* level, const char* file, const int lineNo, const char* args...) {
 
     char content[0xFFFF];
-    char head[50];
+    // if head buff is not big enough, the file path part of log message
+    // will been cutten
+    char head[0xFF];
     sprintf (head, "[%s][%s][line:%d]", level, file, lineNo);
 
 //    printf ("%s", head);

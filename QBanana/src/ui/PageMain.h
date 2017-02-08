@@ -6,6 +6,7 @@
 #include <QBoxLayout>
 #include <QTextEdit>
 #include "../utils/log.h"
+#include "./uiconst.h"
 
 enum BTN_TYPE {
     BTN_TYPE_LIST,
