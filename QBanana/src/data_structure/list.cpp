@@ -44,7 +44,7 @@ bool List::addItem(int content) {
     return rst;
 }
 
-bool List::addItemAtIndex(unsigned int index) {
+bool List::addItemAtIndex(unsigned int index, int content) {
     bool rst = false;
 
 
@@ -87,9 +87,9 @@ bool List::turnOver() {
 }
 
 
-struct ListItem* List::creatItem() {
+struct List::ListItem* List::creatItem() {
     LOG_INFO("creat item");
-    List::ListItem *ptr = (List::ListItem *) malloc(sizeof(List::ListItem));
+    struct List::ListItem *ptr = (List::ListItem *) malloc(sizeof(List::ListItem));
     notifyData();
     return ptr;
 }

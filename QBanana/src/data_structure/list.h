@@ -29,7 +29,9 @@ private:
     struct ListItem *tail;
     struct ListItem *curr;
     unsigned int listCount;
-    struct ListItem* creatItem();
+
+    struct List::ListItem* creatItem();
+
     void creatHead(struct ListItem *tmp, int content);
     void notifyData();
 };

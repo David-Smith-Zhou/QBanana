@@ -30,7 +30,7 @@ void PageList::slotOnBtnClicked() {
     QPushButton *btn = dynamic_cast<QPushButton*>(sender ());
     if (btn == addItemBtn) {
         LOG_INFO("addItemBtn");
-        list.addItem();
+        list.addItem(1);
     } else if (btn == decreaseItemBtn) {
         LOG_INFO("decreaseItemBtn");
         list.reduceItem();
